@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="glass-effect">
+            <h1>Generador de Contraseñas</h1>
+            <h2>By: Sanvi</h2>
+            <div class="options">
+                <div class="option">
+                    <label for="length">Longitud:</label>
+                    <input type="number" id="length" min="8" max="64" value="16">
+                </div>
+                <div class="option">
+                    <label for="uppercase">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkbox-custom"></span>
+                        Mayúsculas
+                    </label>
+                </div>
+                <div class="option">
+                    <label for="lowercase">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkbox-custom"></span>
+                        Minúsculas
+                    </label>
+                </div>
+                <div class="option">
+                    <label for="numbers">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkbox-custom"></span>
+                        Números
+                    </label>
+                </div>
+                <div class="option">
+                    <label for="symbols">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkbox-custom"></span>
+                        Símbolos
+                    </label>
+                </div>
+                <div class="option">
+                    <label for="encrypt">
+                        <input type="checkbox" id="encrypt">
+                        <span class="checkbox-custom"></span>
+                        Encriptado
+                    </label>
+                </div>
+            </div>
+            <div id="encryption-options" class="encryption-options">
+                <h3>Opciones de Encriptación</h3>
+                <div class="option">
+                    <label for="encryption-type">Tipo de Encriptación:</label>
+                    <select id="encryption-type">
+                        <option value="sha256">SHA-256</option>
+                        <option value="aes">AES</option>
+                        <option value="rsa">RSA</option>
+                    </select>
+                </div>
+            </div>
+            <button id="generate">Generar Contraseña</button>
+            <div class="result">
+                <input type="text" id="password" readonly>
+                <button id="copy">Copiar</button>
+            </div>
+            <div class="strength">
+                <label for="strength-meter">Fortaleza de la contraseña:</label>
+                <div class="strength-meter-container">
+                    <div id="strength-meter" class="strength-meter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
